@@ -44,8 +44,8 @@
 <body>
     <div id="backimg">
         <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;">
-            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'BioRhyme', serif;">User Database Management</h3>
-            <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;">Complete Database</i>
+            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'Vollkorn', serif;font-size:24px">User Database Management</h3>
+            <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;font-size:24px">Complete Database</i>
 
 
             <br>
@@ -55,23 +55,23 @@
             <div class="row justify-content-center">
 
                 <div>
-                    <a href='index.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Enter new details</button></a>
+                    <a href='index.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Enter new details</button></a>
                 </div>
                 <div>
-                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Import Data</button></a>
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Import Data</button></a>
                 </div>
                 <div>
-                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Edit</button></a>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Edit</button></a>
                 </div>
 
                 <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Delete</button></a>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Delete</button></a>
                 </div>
 
                 <div>
                 </div>
             </div>
-            <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
+            <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;margin-top: 30px;">
                 <div class="justify-content-center text-center">
                     <div class="table-responsive table-hover">
                         <?php

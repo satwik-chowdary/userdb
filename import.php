@@ -51,9 +51,9 @@
 <body>
     <div id="backimg">
         <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;">
-            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'BioRhyme', serif;">User Database Management</h3>
-            <h4 style="color:white; font-weight: 900;font-family: 'BioRhyme', serif;">Import Details</h4>
-            <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;">Do not add a row for column names and upload only .xlxs file</i>
+            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'Vollkorn', serif;">User Database Management</h3>
+            <h4 style="color:white; font-weight: 900;font-family: 'Vollkorn', serif;font-size:24px">Import Details</h4>
+            <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;font-size:24px">Do not add a row for column names and upload only .xlxs file</i>
             <?php
             require_once('simplexlxs.php');
             if (isset($_POST['import'])) {
@@ -87,16 +87,16 @@
 
             <div class="row justify-content-center">
                 <div>
-                    <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Show Database</button></a>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Show Database</button></a>
                 </div>
                 <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Delete</button></a>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Delete</button></a>
                 </div>
                 <div>
-                    <a href='index.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Enter new Details</button></a>
+                    <a href='index.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Enter new Details</button></a>
                 </div>
                 <div>
-                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Edit</button></a>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Edit</button></a>
                 </div>
 
 

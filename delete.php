@@ -52,8 +52,8 @@
   <div id="backimg">
     <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;">
       <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'BioRhyme', serif;">User Database Management</h3>
-      <h4 style="color:white; font-weight: 900;font-family: 'BioRhyme', serif;">Delete Details</h4>
-      <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;">Details deleted based on email ID</i>
+      <h4 style="color:white; font-weight: 900;font-family: 'Vollkron', serif;font-size:24px;">Delete Details</h4>
+      <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;font-size:24px;">Details deleted based on email ID</i>
 
       <?php
       $con = mysqli_connect('remotemysql.com', 'a4YscOH6O1', 'DG2ZoOqe3f', 'a4YscOH6O1');
@@ -76,18 +76,18 @@
       <div class="row justify-content-center">
 
         <div>
-          <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Show Database</button></a>
+          <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Show Database</button></a>
         </div>
 
         <div>
-          <a href='index.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Enter New Details</button></a>
+          <a href='index.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Enter New Details</button></a>
         </div>
 
         <div>
-          <a href="edit.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Edit</button></a>
+          <a href="edit.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Edit</button></a>
         </div>
         <div>
-          <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Import Data</button></a>
+          <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Import Data</button></a>
         </div>
 
       </div>
