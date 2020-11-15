@@ -8,7 +8,7 @@
     <title>User Management System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favi.webp">
+    <link rel="icon" href="data.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     #backimg{
         background-image: url('res.jpg');
         width: 100%;
-        height: 200vh;
+        height: 350vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

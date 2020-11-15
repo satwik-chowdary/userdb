@@ -7,7 +7,7 @@
     <title>User Management System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favi.webp">
+    <link rel="icon" href="data.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     #backimg{
         background-image: url('res.jpg');
         width: 100%;
-        height: 200vh;
+        height: 280vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -81,18 +81,18 @@
 
             
             <div>
-                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;">Show Database</button></a>
                   </div>
 
                 <div>
-                    <a href='index.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Enter New Details</button></a>
+                    <a href='index.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;">Enter New Details</button></a>
                   </div>
                                                   
                   <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;">Delete</button></a>
                   </div>
                   <div>
-                    <a href='import.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Import Data</button></a>
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;">Import Data</button></a>
                   </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
     <title>User Management System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favi.webp">
+    <link rel="icon" href="data.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     #backimg{
         background-image: url('res.jpg');
         width: 100%;
-        height: 200vh;
+        height: 230vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -58,32 +58,16 @@
         
         $con= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
         if($con){
-        // echo "avcjan";
-            
         $_xlsx = SimpleXLSX::parse($_FILES['import']['tmp_name']);
-      
-       
         foreach ($_xlsx->rows() as $key => $row ){
-            // print_r($row);
             $q="";
             foreach($row as $key => $value){
-                // print_r($value);
-                // echo " <br>"
-              
-                
                     $q.="'".$value."'".", ";
-                
-                
             }
             $s=substr($q,0,strlen($q)-2);
-            // INSERT INTO `details` (`userType`, `userName`, `year_student`, `semester`, `email`, `dateTim`, `ID`, `special`) 
-            // VALUES ('student', 'satwik', '1st', '4th', 'abc@abc.com', '2020-11-14 18:51:12', '132456', 'cse');
-            // INSERT INTO `details` (`userType`, `userName`, `year_student`, `semester`, `email`, `dateTim`, `ID`, `special`) 
-            // VALUES ('errh', 'acsvfbg', 'arvet', 'asre', 'qewrge', 'qefrg', 'qe', 'qfe');
-            // INSERT INTO `details` VALUES ('student', 'satwik', '1st', '4th', 'abc@abc.com', '2020-11-14 18:51:12', '132456', 'cse', );
+            
             $sql="INSERT INTO "."`details` "."(`userType`, `userName`, `year_student`, `semester`, `email`, `dateTim`, `ID`, `special`)"." VALUES"." (".$s.");";
-            // print_r($query);
-            // echo "<br>";
+
             if($con->query($sql)){
                 
             }
@@ -92,10 +76,8 @@
             }
         }
         echo "<i id=submsg>Your data is imported successfully</i>";
-
         }
     }
-
           ?>  
 
         <br>
@@ -104,19 +86,19 @@
         
             <div class="row justify-content-center" >
             <div>
-                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;">Show Database</button></a>
                   </div>
-
+                  <div>
+                    <a href='index.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;">Enter new Details</button></a>
+                  </div>
                 <div>
-                    <a href='edit.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Edit</button></a>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;">Edit</button></a>
                   </div>
                                                   
                   <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;">Delete</button></a>
                   </div>
-                  <div>
-                    <a href='index.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Enter new Details</button></a>
-                  </div>
+                 
             </div>
         </div>
 
