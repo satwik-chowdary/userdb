@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,74 +15,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,600&display=swap" rel="stylesheet">
     <style>
-    *{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
 
-    #backimg{
-        background-image: url('res.jpg');
-        width: 100%;
-        height: 350vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        position: sticky;
-    }
-    #sucmsg{
-        color:#4BB543 ;
-        font-size:18px;
-        font-weight:500;
-    }
-
-    
+        #backimg {
+            background-image: url('res.jpg');
+            width: 100%;
+            height: 350vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: sticky;
+        }
     </style>
 
-    
+
 </head>
+
 <body>
     <div id="backimg">
-        <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;" >
-            <h3 style="color:white; font-weight: 900;font-size: 40px;">User Database Management</h3>
-  
-        <br>
+        <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;">
+            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'BioRhyme', serif;">User Database Management</h3>
+            <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;">Complete Database</i>
+
+
+            <br>
         </div>
         <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
-            <div class="text-center">
-                <p>To edit or delete your details select these</p>
-            </div>
-            <div class="row justify-content-center" >
 
-            <div>
-                    <a href='index.php'><button class="btn btn-info" style="margin: 7px;border-radius:10px;">Enter new details</button></a>
-                  </div>
+            <div class="row justify-content-center">
+
                 <div>
-                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;">Import Data</button></a>
-                  </div>
+                    <a href='index.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Enter new details</button></a>
+                </div>
                 <div>
-                    <a href='edit.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;">Edit</button></a>
-                  </div>
-                                                  
-                  <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;">Delete</button></a>
-                  </div>
-                  
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Import Data</button></a>
+                </div>
                 <div>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Edit</button></a>
+                </div>
+
+                <div>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'BioRhyme', serif;">Delete</button></a>
+                </div>
+
+                <div>
+                </div>
             </div>
-        </div><div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
-        <div class="justify-content-center text-center">
-        <div class="table-responsive table-hover">
-        <?php 
- 
- $conn= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1'); 
- $query = "SELECT * FROM details";
- 
- 
- echo '<table class=table> 
+            <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
+                <div class="justify-content-center text-center">
+                    <div class="table-responsive table-hover">
+                        <?php
+
+                        $conn = mysqli_connect('remotemysql.com', 'a4YscOH6O1', 'DG2ZoOqe3f', 'a4YscOH6O1');
+                        $query = "SELECT * FROM details";
+
+
+                        echo '<table class=table> 
         <thead>
        <tr> 
            <th> userType </th> 
@@ -98,34 +93,34 @@
            <th> specialisation </th> 
        </tr>
        </thead>';
- 
- if ($result = $conn->query($query)) {
-     echo '<tbody>';
-     while ($row = $result->fetch_assoc()) {
-         echo '<tr> 
-                   <td>'.$row["userType"].'</td> 
-                   <td>'.$row["userName"].'</td> 
-                   <td>'.$row["year_student"].'</td> 
-                   <td>'.$row["semester"].'</td> 
-                   <td>'.$row["email"].'</td>
-                   <td>'.$row["dateTim"].'</td>
-                   <td>'.$row["ID"].'</td>
-                   <td>'.$row["special"].'</td> 
-               </tr>';
-     }
-     echo '</tbody>';
-     $result->free();
-     echo '</table>';
- } 
- ?>    
-    </div>
-        </div>
-        </div>
-        
-    </div>
 
-    
-    
+                        if ($result = $conn->query($query)) {
+                            echo '<tbody>';
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<tr> 
+                   <td>' . $row["userType"] . '</td> 
+                   <td>' . $row["userName"] . '</td> 
+                   <td>' . $row["year_student"] . '</td> 
+                   <td>' . $row["semester"] . '</td> 
+                   <td>' . $row["email"] . '</td>
+                   <td>' . $row["dateTim"] . '</td>
+                   <td>' . $row["ID"] . '</td>
+                   <td>' . $row["special"] . '</td> 
+               </tr>';
+                            }
+                            echo '</tbody>';
+                            $result->free();
+                            echo '</table>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
 
 
 </body>
