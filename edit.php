@@ -53,14 +53,14 @@
             <h4 style="color:white; font-weight: 900;">Edit Details</h4>
             <i style="color:white; font-weight: 900;">Details edited based on email ID</i>
             <?php
-  $con=mysqli_connect("localhost","root","");
+  $con= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
   if(isset($_POST['update'])){
     $email=$_POST['email'];
     if($_POST['user']=="student"){
-      $sql="UPDATE `detail`.`details` SET special='$_POST[special]',userName='$_POST[userName]',dateTim=current_timestamp(),ID='$_POST[ID]', userType='$_POST[user]',year_student='$_POST[year]',semester='$_POST[sem]' WHERE email='$_POST[email]' ";
+      $sql="UPDATE `details` SET special='$_POST[special]',userName='$_POST[userName]',dateTim=current_timestamp(),ID='$_POST[ID]', userType='$_POST[user]',year_student='$_POST[year]',semester='$_POST[sem]' WHERE email='$_POST[email]' ";
     }
     else{
-      $sql="UPDATE `detail`.`details` SET special='$_POST[special]',dateTim=current_timestamp(),userName='$_POST[userName]',ID='$_POST[ID]', userType='$_POST[user]',year_student='NULL',semester='NULL' WHERE email='$_POST[email]' ";
+      $sql="UPDATE `details` SET special='$_POST[special]',dateTim=current_timestamp(),userName='$_POST[userName]',ID='$_POST[ID]', userType='$_POST[user]',year_student='NULL',semester='NULL' WHERE email='$_POST[email]' ";
     }
     if($con->query($sql)===TRUE){
       echo "<br> 

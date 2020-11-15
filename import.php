@@ -56,7 +56,7 @@
     if(isset($_POST['import'])){
         
         
-        $con=mysqli_connect("localhost","root","","detail");
+        $con= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
         if($con){
         // echo "avcjan";
             

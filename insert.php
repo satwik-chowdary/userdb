@@ -59,7 +59,7 @@ $email=$_POST['email'];
 $ID=$_POST['ID'];
 $special=$_POST['special'];
 
-$conn= mysqli_connect('localhost','root','','detail');
+$conn= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
 
 if($user == "student"){
     $years=$_POST['years'];
@@ -114,7 +114,7 @@ else{
         <div class="table-responsive table-hover">
         <?php 
  
- $conn = mysqli_connect("localhost", "username", "", "detail"); 
+ $conn= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1'); 
  $query = "SELECT * FROM details";
  
  

@@ -54,7 +54,7 @@
             <i style="color:white; font-weight: 900;">Details deleted based on email ID</i>
 
             <?php
-  $con=mysqli_connect("localhost","root","","detail");
+  $con= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
   if(isset($_POST['delete'])){
     $email=$_POST['email'];
     $sql="DELETE FROM details WHERE email='$email'";
