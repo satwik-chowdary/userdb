@@ -61,18 +61,19 @@
             <div class="row justify-content-center" >
 
             <div>
-                    <a href='index.php'><button class="btn btn-info" style="margin: 15px;border-radius:10px;">Enter new details</button></a>
+                    <a href='index.php'><button class="btn btn-info" style="margin: 7px;border-radius:10px;">Enter new details</button></a>
                   </div>
                 <div>
-                    <a href='edit.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Edit</button></a>
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;">Import Data</button></a>
+                  </div>
+                <div>
+                    <a href='edit.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;">Edit</button></a>
                   </div>
                                                   
                   <div>
-                    <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;">Delete</button></a>
                   </div>
-                  <div>
-                    <a href='import.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Import Data</button></a>
-                  </div>
+                  
                 <div>
             </div>
         </div><div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
