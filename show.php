@@ -29,7 +29,7 @@
         #backimg {
             background-image: url('res.jpg');
             width: 100%;
-            height: 350vh;
+            height: 390vh;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;

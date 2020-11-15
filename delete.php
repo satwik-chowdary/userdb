@@ -29,7 +29,7 @@
     #backimg {
       background-image: url('res.jpg');
       width: 100%;
-      height: 200vh;
+      height: 280vh;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -89,7 +89,7 @@
         <div>
           <a href="edit.php"><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Edit</button></a>
         </div>
-        
+
 
       </div>
     </div>
