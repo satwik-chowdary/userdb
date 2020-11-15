@@ -36,6 +36,12 @@
         position: sticky;
     }
   
+    #submsg{
+        color:#4BB543 ;
+        font-size:18px;
+        font-weight:500;
+    }
+
 
     
     </style>
@@ -48,7 +54,8 @@
             <h3 style="color:white; font-weight: 900;font-size: 40px;">User Database Management</h3>
             <?php
 
-$user=$_POST['user'];
+if(isset($_POST['submit'])){
+  $user=$_POST['user'];
 $userName=$_POST['nameUser'];
 $email=$_POST['email'];
 $ID=$_POST['ID'];
@@ -62,7 +69,7 @@ if($user == "student"){
     $sql_query="INSERT INTO `details` (`userType`,`userName`,`year_student`,`semester`,`email`,`dateTim`,`ID`,`special`)
     VALUES ('$user','$userName','$years','$sem','$email',current_timestamp(),'$ID','$special')";
     if($conn->query($sql_query)){
-        echo "<i id=sucmsg>Your Data has been added sucessfully.</i>";
+        echo "<i id=submsg>Your Data has been added sucessfully.</i>";
     }
     else{
         echo "fail" . $conn->error;
@@ -77,6 +84,7 @@ else{
     else{
         echo "fail" . $conn->error;
     }
+}
 }
 
 ?>
@@ -175,7 +183,7 @@ else{
                                 
                     <div class="form-group">        
                             <div class="col-sm-12" >
-                              <input type="submit" name="update" class="btn btn-success" style="width:100%; margin-top:30px;border-radius:15px;">
+                              <input type="submit" name="submit" class="btn btn-success" style="width:100%; margin-top:30px;border-radius:15px;">
                             </div>
 
                      
