@@ -76,7 +76,7 @@
                             echo "fail";
                         }
                     }
-                    echo "<i id=submsg>Your data is imported successfully</i>";
+                    echo "<i id=submsg><br>Your data is imported successfully</i>";
                 }
             }
             ?>
