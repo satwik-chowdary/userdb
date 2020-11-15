@@ -90,7 +90,7 @@ else{
         </div>
         <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
             <div class="text-center">
-                <p>To edit or delete your details select these</p>
+                <p>All the records</p>
             </div>
             <div class="row justify-content-center" >
 

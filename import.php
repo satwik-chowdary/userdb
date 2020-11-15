@@ -104,13 +104,18 @@
         
             <div class="row justify-content-center" >
             <div>
-                    <a href='edit.php'><button class="btn btn-info" style="margin: 15px;border-radius:10px;">Enter new details</button></a>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
                   </div>
+
                 <div>
-                    <a href='edit.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Edit</button></a>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Edit</button></a>
+                  </div>
+                                                  
+                  <div>
+                    <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
                   </div>
                   <div>
-                    <a href='index.php'><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
+                    <a href='index.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Enter new Details</button></a>
                   </div>
             </div>
         </div>

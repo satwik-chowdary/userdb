@@ -46,7 +46,41 @@
     <div id="backimg">
         <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;" >
             <h3 style="color:white; font-weight: 900;font-size: 40px;">User Database Management</h3>
-            
+            <?php
+
+$user=$_POST['user'];
+$userName=$_POST['nameUser'];
+$email=$_POST['email'];
+$ID=$_POST['ID'];
+$special=$_POST['special'];
+
+$conn= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
+
+if($user == "student"){
+    $years=$_POST['years'];
+    $sem=$_POST['sem'];
+    $sql_query="INSERT INTO `details` (`userType`,`userName`,`year_student`,`semester`,`email`,`dateTim`,`ID`,`special`)
+    VALUES ('$user','$userName','$years','$sem','$email',current_timestamp(),'$ID','$special')";
+    if($conn->query($sql_query)){
+        echo "<i id=sucmsg>Your Data has been added sucessfully.</i>";
+    }
+    else{
+        echo "fail" . $conn->error;
+    }
+}
+else{
+    $sql_query="INSERT INTO `details` (`userType`,`userName`,`year_student`,`semester`,`email`,`dateTim`,`ID`,`special`)
+    VALUES ('$user','$userName','NULL','NULL','$email',current_timestamp(),'$ID','$special')";
+    if($conn->query($sql_query)){
+        echo "<i id=sucmsg>Your Data has been added sucessfully.</i>";
+    }
+    else{
+        echo "fail" . $conn->error;
+    }
+}
+
+?>
+
         <br>
         </div>
         <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
@@ -55,19 +89,27 @@
             </div>
             <div class="row justify-content-center" >
                 
+            <div>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
+                  </div>
+
                 <div>
-                    <a href='edit.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Edit</button></a>
+                    <a href='edit.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Edit</button></a>
                   </div>
                                                   
                   <div>
                     <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
                   </div>
+                  <div>
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Import Data</button></a>
+                  </div>
+                         
             </div>
         </div>
         
         <div>
             <div id="main" class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
-                <form class="form-horizontal" method="POST" action="insert.php" >
+                <form class="form-horizontal" method="POST" action="index.php" >
                     <div class="form-group">
                         <label for="user" class="control-label col-sm-6" style="font-weight: 400;">Select type of User</label>
                         <select class="form-control col-sm-12" id="user" style="margin-left:10px ;" name="user" required>

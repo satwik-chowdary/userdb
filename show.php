@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +36,12 @@
         background-attachment: fixed;
         position: sticky;
     }
-  
-    #submsg{
-        color:#F32013 ;
+    #sucmsg{
+        color:#4BB543 ;
         font-size:18px;
         font-weight:500;
     }
+
     
     </style>
 
@@ -50,36 +51,20 @@
     <div id="backimg">
         <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;" >
             <h3 style="color:white; font-weight: 900;font-size: 40px;">User Database Management</h3>
-            <h4 style="color:white; font-weight: 900;">Delete Details</h4>
-            <i style="color:white; font-weight: 900;">Details deleted based on email ID</i>
-
-            <?php
-  $con= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1');
-  if(isset($_POST['delete'])){
-    $email=$_POST['email'];
-    $sql="DELETE FROM details WHERE email='$email'";
-    if($con->query($sql)){
-        echo "<br> 
-      <i id=submsg >Your data has been deleted successfully</i>";
-    }
-    else{
-        echo "failed".$con->error;
-    }
-  }
-  $con->close();
-?>
+  
         <br>
         </div>
         <div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
-        
+            <div class="text-center">
+                <p>To edit or delete your details select these</p>
+            </div>
             <div class="row justify-content-center" >
-            
-            <div>
-                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
-                  </div>
 
+            <div>
+                    <a href='index.php'><button class="btn btn-info" style="margin: 15px;border-radius:10px;">Enter new details</button></a>
+                  </div>
                 <div>
-                    <a href='index.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Enter New Details</button></a>
+                    <a href='edit.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Edit</button></a>
                   </div>
                                                   
                   <div>
@@ -88,38 +73,57 @@
                   <div>
                     <a href='import.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Import Data</button></a>
                   </div>
-                 
+                <div>
             </div>
-        </div>
-
-        <div>
-            <div id="main" class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
-                <form class="form-horizontal" method="POST" action="delete.php" >
-                    
-                    
-                      <div class="form-group">
-                        <label class="control-label col-sm-6" for="email" style=" font-weight: 400;font-size: 16px;" >Enter your email:</label>
-                        <div class="col-sm-12">
-                          <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
-                        </div>
-                      </div>
-                    
-                        <div class="form-group">        
-                            <div class="col-sm-12" >
-                              <input type="submit" name="delete" class="btn btn-danger" style="width:100%; margin-top:30px;border-radius:15px;">
-                            </div>
-                    
-                                  
-                           
-                    </div>
-        
-                </form>
-            </div>
-        </div>
-        
-        
-
+        </div><div class="container" style="background-color:white;box-shadow: 2px 2px 10px black; border-radius:25px;width: 90%; height: fit-content; padding: 30px; margin-bottom: 30px;">
+        <div class="justify-content-center text-center">
+        <div class="table-responsive table-hover">
+        <?php 
+ 
+ $conn= mysqli_connect('remotemysql.com','a4YscOH6O1','DG2ZoOqe3f','a4YscOH6O1'); 
+ $query = "SELECT * FROM details";
+ 
+ 
+ echo '<table class=table> 
+        <thead>
+       <tr> 
+           <th> userType </th> 
+           <th> userName </th> 
+           <th> year_student </th> 
+           <th> semester </th> 
+           <th> email </th>
+           <th> dateTime </th>
+           <th> ID </th>
+           <th> specialisation </th> 
+       </tr>
+       </thead>';
+ 
+ if ($result = $conn->query($query)) {
+     echo '<tbody>';
+     while ($row = $result->fetch_assoc()) {
+         echo '<tr> 
+                   <td>'.$row["userType"].'</td> 
+                   <td>'.$row["userName"].'</td> 
+                   <td>'.$row["year_student"].'</td> 
+                   <td>'.$row["semester"].'</td> 
+                   <td>'.$row["email"].'</td>
+                   <td>'.$row["dateTim"].'</td>
+                   <td>'.$row["ID"].'</td>
+                   <td>'.$row["special"].'</td> 
+               </tr>';
+     }
+     echo '</tbody>';
+     $result->free();
+     echo '</table>';
+ } 
+ ?>    
     </div>
+        </div>
+        </div>
+        
+    </div>
+
+    
     
 
 
@@ -128,7 +132,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+
 
 </html>
 

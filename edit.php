@@ -80,13 +80,19 @@
             <div class="row justify-content-center" >
 
             
-               
-                <div>
-                    <a href='index.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Enter Details</button></a>
+            <div>
+                    <a href='show.php'><button class="btn btn-primary" style="margin: 15px;border-radius:10px;">Show Database</button></a>
                   </div>
 
+                <div>
+                    <a href='index.php'><button class="btn btn-warning" style="margin: 15px;border-radius:10px;">Enter New Details</button></a>
+                  </div>
+                                                  
                   <div>
                     <a href="delete.php"><button class="btn btn-danger" style="margin: 15px;border-radius:10px;">Delete</button></a>
+                  </div>
+                  <div>
+                    <a href='import.php'><button class="btn btn-secondary" style="margin: 15px;border-radius:10px;">Import Data</button></a>
                   </div>
             </div>
         </div>
