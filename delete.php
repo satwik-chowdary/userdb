@@ -76,19 +76,20 @@
       <div class="row justify-content-center">
 
         <div>
-          <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Show Database</button></a>
+          <a href='show.php'><button class="btn btn-primary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Show Database</button></a>
+        </div>
+        <div>
+          <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Import Data</button></a>
         </div>
 
         <div>
-          <a href='index.php'><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Enter New Details</button></a>
+          <a href='index.php'><button class="btn btn-info" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Enter New Details</button></a>
         </div>
 
         <div>
-          <a href="edit.php"><button class="btn btn-danger" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Edit</button></a>
+          <a href="edit.php"><button class="btn btn-warning" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;">Edit</button></a>
         </div>
-        <div>
-          <a href='import.php'><button class="btn btn-secondary" style="margin: 7px;border-radius:10px;font-family: 'Vollkorn', serif;font-size:24px;">Import Data</button></a>
-        </div>
+        
 
       </div>
     </div>

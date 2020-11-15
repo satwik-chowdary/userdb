@@ -44,7 +44,7 @@
 <body>
     <div id="backimg">
         <div class="container text-center justify-content-center align-middle" style="padding-top: 40px;padding-bottom: 10px;">
-            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'Vollkorn', serif;font-size:24px">User Database Management</h3>
+            <h3 style="color:white; font-weight: 900;font-size: 40px;font-family: 'Vollkorn', serif;">User Database Management</h3>
             <i style="color:white; font-weight: 900;font-family:'Vollkorn', serif;font-size:24px">Complete Database</i>
 
 
